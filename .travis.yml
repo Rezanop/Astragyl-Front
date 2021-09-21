@@ -15,7 +15,7 @@ cache:
     - node_modules
 script:
   - yarn build
-  - yarn test:coverage && codecov
+  - yarn ci:check && codecov
 after_success:
   - echo 'After Success:'
   - bash <(curl -s https://codecov.io/bash)
