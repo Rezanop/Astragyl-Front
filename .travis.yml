@@ -7,14 +7,14 @@ before_install:
   - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
   - sudo apt-get update -qq
   - sudo apt-get install -y -qq yarn
-  - npm ci -g codecov
+  - yarn add --global codecov
 cache:
   yarn: true
   directories:
     - node_modules
 script:
   - yarn build
-  - yarn ci:check && codecov
+  - yarn ci:check
 after_success:
   - echo 'After Success:'
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov -f coverage/*.json
