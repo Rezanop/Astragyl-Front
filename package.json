@@ -10,14 +10,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "reinstall": "rm -rf ./node_modules && yarn",
+    "ci:check": "yarn format && yarn lint && yarn test:coverage",
     "lint": "eslint -c .eslintrc.json './src/**/*.{js,jsx,ts,tsx}' ",
     "lint:fix": "eslint -c .eslintrc.json './src/**/*.{js,jsx,ts,tsx}' --fix",
-    "format:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "format": "prettier --list-different 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "ci:check": "yarn format && yarn lint && yarn test:coverage",
+    "format:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
@@ -58,7 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged"
+      "pre-commit": "lint-staged -v && pretty-quick --staged"
     }
   },
   "lint-staged": {
