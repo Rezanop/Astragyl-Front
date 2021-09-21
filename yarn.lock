@@ -10143,6 +10143,11 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-redux-typescript-scripts@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/react-redux-typescript-scripts/-/react-redux-typescript-scripts-1.6.2.tgz#5425374e134eee848968bc35901abc5a9b084f7e"
+  integrity sha512-nASG+t4r7fy7Ov+3R0Lw/tSzAQAeqSlV6qXrz/au0Q3/Gs50oXGJHrz3WWMzPRs2mN/gPV6afgXNMOCQMuhQGA==
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
