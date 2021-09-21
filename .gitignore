@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# Analyzing
+/styleguide
+
 # production
 /build
 
