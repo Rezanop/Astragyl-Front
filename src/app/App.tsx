@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
+import { Provider } from 'react-redux';
 
-import './App.css';
+import createAppStore from '../store/store';
 
 const App: FC = () => {
   return (
     <div>
-      <h1>Astragyl</h1>
+      <Provider store={createAppStore}>
+        <h1>Astragyl</h1>
+      </Provider>
     </div>
   );
 };
