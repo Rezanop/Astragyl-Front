@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+import type { RootState } from '../../store/store';
 interface PlayState {
   isGameActive: boolean;
 }
@@ -20,5 +20,7 @@ export const playSlice = createSlice({
 });
 
 export const { enableGame, disableGame } = playSlice.actions;
+
+export const selectPlayState = (state: RootState): PlayState => state.play;
 
 export default playSlice.reducer;

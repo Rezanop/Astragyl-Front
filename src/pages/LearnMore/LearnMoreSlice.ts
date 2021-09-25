@@ -24,4 +24,6 @@ export const learnMoreSlice = createSlice({
 
 export const { clearValue, updateValue } = learnMoreSlice.actions;
 
+export const selectLearnMoreState = (state: RootState): LearnMoreState => state.learnMore;
+
 export default learnMoreSlice.reducer;

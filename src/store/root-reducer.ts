@@ -2,8 +2,8 @@ import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import homeReducer from '../pages/Home/HomeSlice';
-import contactUsReducer from '../pages/Contact-us/ContactUsSlice';
-import learnMoreReducer from '../pages/Learn-More/LearnMoreSlice';
+import contactUsReducer from '../pages/ContactUs/ContactUsSlice';
+import learnMoreReducer from '../pages/LearnMore/LearnMoreSlice';
 import playReducer from '../pages/Play/PlaySlice';
 
 export const history = createBrowserHistory();

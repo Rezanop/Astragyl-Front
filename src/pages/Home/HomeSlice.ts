@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type RootState from '../../store/store';
+import type { RootState } from '../../store/store';
 
 interface HomeState {
   scrollPosition: string;
@@ -23,5 +23,7 @@ const homeSlice = createSlice({
 });
 
 export const { clearScrollPosition, updateScrollPosition } = homeSlice.actions;
+
+export const selectHomeState = (state: RootState): HomeState => state.home;
 
 export default homeSlice.reducer;

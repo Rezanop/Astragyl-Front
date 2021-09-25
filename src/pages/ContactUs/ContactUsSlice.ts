@@ -58,4 +58,6 @@ export const contactUsSlice = createSlice({
 
 export const { resetForm, sendForm, updateValue, enableForm, disableForm } = contactUsSlice.actions;
 
+export const selectContactUsState = (state: RootState): ContactUsState => state.contactUs;
+
 export default contactUsSlice.reducer;
