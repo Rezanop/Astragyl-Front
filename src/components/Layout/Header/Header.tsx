@@ -1,27 +1,27 @@
 import React, { FC } from 'react';
+import { BrowserRouter as Router, NavLink, Link } from 'react-router-dom';
 
 const Header: FC = () => {
   return (
-    <nav>
+    <>
       <div>
-        <i>Logo Here</i>
+        <Link to="/">Logo Here</Link>
       </div>
-      {/** Browser Router Should be Here */}
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/learn-more">Learn More</a>
+          <Link to="/learn-more">Learn More</Link>
         </li>
         <li>
-          <a href="/contact-us">Contact Us</a>
+          <Link to="/contact-us">Contact Us</Link>
         </li>
         <li>
-          <a href="/play">Play</a>
+          <Link to="/play">Play</Link>
         </li>
       </ul>
-    </nav>
+    </>
   );
 };
 
