@@ -11,8 +11,6 @@ import Play from '../pages/Play/Play';
 import LearnMore from '../pages/LearnMore/LearnMore';
 import ContactUs from '../pages/ContactUs/ContactUs';
 
-//const createRender = (component: ComponentType) => () =>
-
 const App: FC = () => {
   return (
     <div>
@@ -23,7 +21,7 @@ const App: FC = () => {
               <Route exact path="/" render={() => <Home />} />
               <Route exact path="/play" render={() => <Play />} />
               <Route exact path="/learn-more" render={() => <LearnMore />} />
-              <Route exact path="/about-us" render={() => <ContactUs />} />
+              <Route exact path="/contact-us" render={() => <ContactUs />} />
             </Switch>
           </Layout>
         </ConnectedRouter>
