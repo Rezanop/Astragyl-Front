@@ -35,7 +35,7 @@ export const contactUsSlice = createSlice({
       state = initialState;
     },
     sendForm: (state: ContactUsState) => {
-      console.log('Send Email');
+      //console.log('Send Email');
     },
     updateValue: (
       state: ContactUsState,
