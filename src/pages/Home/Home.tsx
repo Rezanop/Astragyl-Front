@@ -1,12 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  background-color: ${(props) => {
-    //console.log('props: ', props);
-    return props.theme.colors.primary;
-  }};
-`;
+const Wrapper = styled.div``;
 
 const Home: FC = () => {
   return (

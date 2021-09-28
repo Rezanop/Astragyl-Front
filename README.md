@@ -32,9 +32,16 @@
 [x] Add a Layout Component with Routes.
 
 ### Development
-
-[ ] Navigation App Bar.
-[ ] Footer
+[ ] Build a css theme from the figma design.
+[x] Reset default browser styles.
+[ ] Layout:
+	[ ] TopBar for Navigation.
+	[ ] SideBar for Social Media.
+	[ ] Main for Page Content.
+	[ ] Footer for Quick Links & Info.
+	[ ] Styling using styled-component and pure CSS.
+	[ ] Responsiveness
+	[ ] Unit Testing
 [ ] Home Page
 [ ] About the game Page
 [ ] Contact Page
