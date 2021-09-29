@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import routes from '../../../router/routes';
 
 /* Navigation Top Bar Wrapper Component */
 const NavigationBarWrapper = styled.nav`
@@ -18,17 +20,34 @@ const NavButtonGroup = styled.ul`
   list-style: none;
   flex-grow: 1;
 `;
+
 // Navigation Button
 const NavButton = styled.li`
-  padding: 1em;
+  padding: 1em 1em;
+  margin: 0 1em;
+  min-width: 14%;
+  text-align: center;
 `;
-// Navigation Link
-const Link = styled(NavLink)`
+
+// Navigation NavLink
+const NavLink = styled(Link)`
   text-decoration: none;
   padding: 1em;
-  color: white;
+  color: ${(props) => props.theme.palette.color3};
+  opacity: 0.9;
   &:visited {
-    color: white;
+    color: ${(props) => props.theme.palette.color3};
+  }
+  &.${(props) => props.activeClassName} {
+    color: ${(props) => props.theme.palette.color9};
+    text-decoration-line: underline;
+    text-underline-offset: 100%;
+    opacity: 1;
+    font-weight: bold;
+  }
+  ${NavButton}:hover & {
+    color: ${(props) => props.theme.palette.color9};
+    font-weight: bold;
   }
 `;
 
@@ -36,22 +55,27 @@ const Link = styled(NavLink)`
  * Handles all the logic and rendering of the Top Bar Navigation
  * @returns NavigationTopBar Component
  */
-const NavigationTopBar: FC = () => {
+const NavigationTopBar: FC = (props) => {
+  console.log('Props: ', props);
   return (
     <NavigationBarWrapper>
       <NavButtonGroup>
-        <NavButton>
-          <Link to="/">Home</Link>
-        </NavButton>
-        <NavButton>
-          <Link to="/about-the-game">About The Game</Link>
-        </NavButton>
-        <NavButton>
-          <Link to="/about-me">About Us</Link>
-        </NavButton>
-        <NavButton>
-          <Link to="/contact-us">Contact Us</Link>
-        </NavButton>
+        {routes
+          .filter((routeInfo) => routeInfo.showInNav)
+          .map((route) => ({ name: route.name, path: route.path, exact: route.exact }))
+          .map((routePathAndName) => {
+            return (
+              <NavButton key={routePathAndName.path}>
+                <NavLink
+                  exact={routePathAndName.exact}
+                  activeClassName="activeLink"
+                  to={routePathAndName.path}
+                >
+                  {routePathAndName.name}
+                </NavLink>
+              </NavButton>
+            );
+          })}
       </NavButtonGroup>
     </NavigationBarWrapper>
   );

@@ -25,6 +25,7 @@ declare module 'styled-components' {
       color6: string;
       color7: string;
       color8: string;
+      color9: string;
     };
     typography: {
       title: {

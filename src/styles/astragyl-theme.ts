@@ -24,6 +24,7 @@ const astragylTheme: DefaultTheme = {
     color6: '#520AD6', // Ultramarine
     color7: '#4FCDC9', // Medium Turquoise
     color8: '#1E1835', // Dark Purple
+    color9: '#EB8C39', // Orange
   },
   typography: {
     title: {
