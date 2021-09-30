@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { isOrWider, than } from '../../../styles/theme-utils';
 
 import routes from '../../../router/routes';
 
@@ -9,45 +10,51 @@ const NavigationBarWrapper = styled.nav`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+
   background-color: ${(props) => props.theme.palette.color8};
 `;
 
 /* Navigation Buttons Group Wrapper */
 const NavButtonGroup = styled.ul`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
   list-style: none;
+
+  display: flex;
+  flex-flow: row nowrap;
   flex-grow: 1;
+  justify-content: center;
 `;
 
 // Navigation Button
 const NavButton = styled.li`
-  padding: 1em 1em;
-  margin: 0 1em;
+  flex-shrink: 1;
+
   min-width: 14%;
+  padding: 1em 1em;
+  margin: 0 1%;
+
   text-align: center;
 `;
 
 // Navigation NavLink
 const NavLink = styled(Link)`
   text-decoration: none;
+
   padding: 1em;
+
   color: ${(props) => props.theme.palette.color3};
-  opacity: 0.9;
+
   &:visited {
     color: ${(props) => props.theme.palette.color3};
   }
   &.${(props) => props.activeClassName} {
-    color: ${(props) => props.theme.palette.color9};
     text-decoration-line: underline;
     text-underline-offset: 100%;
     opacity: 1;
+    color: ${(props) => props.theme.palette.color9};
     font-weight: bold;
   }
   ${NavButton}:hover & {
     color: ${(props) => props.theme.palette.color9};
-    font-weight: bold;
   }
 `;
 

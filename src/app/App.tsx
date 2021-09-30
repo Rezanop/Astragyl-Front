@@ -9,7 +9,7 @@ import { history } from '../store/root-reducer';
 import routes from '../router/routes';
 import Layout from '../components/Layout/Layout';
 
-import { astragylTheme } from '../styles/astragyl-theme';
+import astragylTheme from '../styles/theme';
 
 const App: FC = () => {
   return (

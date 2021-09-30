@@ -33,18 +33,18 @@
 
 ### Development
 
-- [ ] Build a css theme from the figma design (WIP).
+- [ ] Build a css theme from the figma design.
 - [ ] Add Pictures assets. (WIP)
-- [ ] Add Icons assets. (WIP)
+- [x] Add Icons assets: Fontawesome5 as SVG
 - [ ] Add Fonts assets. (WIP)
 - [x] Reset default browser styles.
 - [ ] Layout:
   - [x] TopBar for Navigation.
-  - [ ] SideBar for Social Media. (WIP)
+  - [x] SideBar for Social Media.
   - [ ] Main for Page Content.
-  - [ ] Footer for Quick Links & Info.
+  - [ ] Footer for Quick Links & Info. (WIP)
   - [ ] Styling using styled-component and pure CSS. (WIP)
-  - [ ] Responsiveness
+  - [ ] Responsiveness (WIP)
   - [ ] Unit Testing
 - [ ] Home Page
 - [ ] About the game Page

@@ -8,7 +8,7 @@ import ResetCssWrapper from '../ResetCssWrapper/ResetCssWrapper';
 
 const RightSideContent = styled.div`
   flex-grow: 1;
-  width: auto;
+  width: 90%;
 `;
 
 const LayoutWrapper = styled.div`
