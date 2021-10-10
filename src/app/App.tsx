@@ -1,4 +1,4 @@
-import React, { FC, ComponentType } from 'react';
+import React, { FC } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router-dom';
@@ -6,12 +6,10 @@ import { ThemeProvider } from 'styled-components';
 
 import appStore from '../store/store';
 import { history } from '../store/root-reducer';
+import routes from '../router/routes';
 import Layout from '../components/Layout/Layout';
-import Home from '../pages/Home/Home';
-import Play from '../pages/Play/Play';
-import LearnMore from '../pages/LearnMore/LearnMore';
-import ContactUs from '../pages/ContactUs/ContactUs';
-import { astragylTheme } from '../styles/astragyl-theme';
+
+import astragylTheme from '../styles/theme';
 
 const App: FC = () => {
   return (
@@ -21,10 +19,14 @@ const App: FC = () => {
           <ThemeProvider theme={astragylTheme}>
             <Layout>
               <Switch>
-                <Route exact path="/" render={() => <Home />} />
-                <Route exact path="/play" render={() => <Play />} />
-                <Route exact path="/learn-more" render={() => <LearnMore />} />
-                <Route exact path="/contact-us" render={() => <ContactUs />} />
+                {routes.map((route) => (
+                  <Route
+                    key={route.path}
+                    exact={route.exact}
+                    path={route.path}
+                    render={() => <route.component />}
+                  />
+                ))}
               </Switch>
             </Layout>
           </ThemeProvider>
