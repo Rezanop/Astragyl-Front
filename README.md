@@ -27,7 +27,7 @@
 
 ### Dev preparation
 
-- [x] Re-organize project structures and hierchy.
+- [x] Re-organize project structures and hierarchy.
 - [x] Add Starting point pages
 - [x] Add a Layout Component with Routes.
 
